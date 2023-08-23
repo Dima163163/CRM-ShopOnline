@@ -12,7 +12,9 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: normal;
 }
 
 
@@ -48,6 +50,8 @@ p,
 figure,
 fieldset {
   margin: 0;
+  border: none;
+  padding: 0;
 }
 
 iframe {
@@ -74,7 +78,13 @@ iframe {
 */
 
 .container {
-  max-width: 1240px;
-  padding: 0 30px;
+  max-width: 1300px;
+  padding: 0 100px;
   margin: 0 auto;
+}
+
+.form {
+  max-width: 580px;
+  width: 100%;
+  min-height: 403px;
 }

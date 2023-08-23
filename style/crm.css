@@ -1,12 +1,33 @@
-.crm {
-	display: flex;
-	gap: 12px;
-	flex-direction: column;
+.form {
 	padding: 28px;
-	background-color: #FFF;
+	background-color: var(--white, #FFF);
 	border-radius: 15px;
-	border: none;
 	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.20));
+	margin-bottom: 28px;
+}
+
+.crm-data {
+	display: grid;
+	gap: 32px 24px;
+	grid-template-columns: 250px 250px;
+	grid-template-rows: 276px 39px;
+	max-height: 403px;
+	max-width: 580px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.crm {
+	max-width: 524px;
+	width: 100%;
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+	display: grid;
+	gap: 12px 24px;
+	grid-template-columns: 250px 250px;
+	grid-template-rows: 60px 60px  60px 60px 39px;
+
 }
 
 .crm-wrapper {
@@ -15,6 +36,75 @@
   border: none;
 	gap: 5px;
 	padding: 0;
+	min-height: 60px;
+}
+
+.crm__name {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.crm__descpiption-textarea {
+	grid-column: 2 / 3;
+	grid-row: 1 / 3;
+}
+
+.crm__category {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+.crm__units {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+}
+
+.crm__discont {
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+}
+
+.crm__count {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+}
+
+.crm__price {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+	margin-bottom: 32px;
+}
+
+.crm-image {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	min-height: 39px;
+}
+
+.crm-image__input {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.crm-image-button {
+	width: 100%;
+	max-width: 250px;
+	height: 39px;
+	display: block;
+	background: #6D5BD0;
+	padding: 11px 28px;
+	border-radius: 6px;
+	color: #FFF;
+	font-family: Inter, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
 }
 
 .crm-wrapper__title {
@@ -51,47 +141,6 @@
 	padding: 0;
 }
 
-/* .crm__checkbox {
-	position: relative;
-	display: block;
-	padding-left: 40px;
-}
-
-.crm__checkbox-input {
-	cursor: pointer;
-	appearance: none;
-}
-
-.crm__checkbox-input::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 40px;
-	height: 40px;
-	background-color: #F4F2FF;
-	border-radius: 6px;
-}
-
-.crm__checkbox-input::after {
-	content: '';
-	position: absolute;
-	top: 12px;
-	left: 10px;
-	width: 20px;
-	height: 15px;
-	border: 3px solid #000000;
-	border-top: none;
-	border-right: none;
-	opacity: 0;
-	transform: rotate(-45deg);
-}
-
-.crm__checkbox > .crm__checkbox-input:checked::after {
-	opacity: 1;
-} */
-
 .crm__discont-input {
 	background-color: #EEE;
 }
@@ -117,9 +166,9 @@
 .crm__checkbox::after {
 	content: '';
 	position: absolute;
-	top: 12px;
-	left: 10px;
-	width: 20px;
+	top: 9px;
+	left: 8px;
+	width: 24px;
 	height: 15px;
 	border: 3px solid #000000;
 	border-top: none;
@@ -136,12 +185,20 @@
 	background-color: #F4F2FF;
 }
 
-.btn-wrapper {
+.modal-bottom-wrapper {
 	display: flex;
-	justify-content: end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 532px;
+	width: 100%;
+	gap: 20px;
+	margin: 0 auto;
 }
 
 .btn {
+	display: block;
+	min-width: 250px;
+	min-height: 39px;
 	background: #6D5BD0;
 	padding: 10px 25px;
 	border-radius: 6px;
@@ -152,7 +209,33 @@
 	font-weight: 600;
 	line-height: normal;
 	text-transform: uppercase;
-	margin-top: 32px;
-	margin-right: 28px;
 }
 
+.crm-warning__text {
+	color: var(--red, #D80101);
+	text-align: center;
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+}
+
+.crm-product-card {
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	background-image: url('../img/cofe-automat.png');
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
+}
+
+.crm-product-card_delete {
+	cursor: pointer;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../img/cofe-automat.png'), lightgray 50% / cover no-repeat;
+}

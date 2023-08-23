@@ -11,20 +11,30 @@
 	<title>CRM</title>
 </head>
 <body>
-	<div class="modal">
+	<div class="overlay">
 		<div class="modal-open">
 			<div class="modal-open__wrapper">
-				<h2 class="modal__title">Добавить товар</h2>
+				<div class="modal__title-wrapper">
+					<h2 class="modal__title">Изменить товар</h2>
+					<p class="modal__id">id: 201910241</p>
+				</div>
+				
 				<button class="modal-close">
 					<img src="img/close.svg" alt="Кнопка закрытия" class="modal-close__img">
 				</button>
 				<form class="form"
 						action="https://jsonplaceholder.typicode.com/posts"
 						method="POST">
-						<fieldset class="crm">
+						<fieldset class="crm-data">
+							<fieldset class="crm">
 							<fieldset class="crm-wrapper crm__name">
 								<label for="name" class="crm-wrapper__title crm__name-title">Наименование</label>
 								<input class="crm-wrapper__input crm__name-input" type="text" name="name" id="name">
+							</fieldset>
+							<fieldset class="crm-wrapper crm__descpiption">
+								<label for="description" class="crm-wrapper__title crm__descpiption-title">Описание</label>
+								<textarea class="crm-wrapper__textarea crm__descpiption-textarea" name="descpiption" id="descpiption">
+								</textarea>
 							</fieldset>
 							<fieldset class="crm-wrapper crm__category">
 								<label for="category" class="crm-wrapper__title  crm__category-title">Категория</label>
@@ -37,15 +47,10 @@
 							<fieldset class="crm-wrapper crm__discont">
 								<label for="discont" class="crm-wrapper__title crm__discont-title">Дисконт</label>
 								<fieldset id="discont" class="crm__discont-wrapper">
-									<input class="crm__checkbox-input" type="checkbox" name="discont-checkbox" id="discont-checkbox">
+									<input class="crm__checkbox-input" type="checkbox" name="discont-checkbox" id="discont-checkbox" checked>
 									<label for="discont-checkbox" class="crm__checkbox"></label>
 									<input class="crm-wrapper__input crm__discont-input" type="input" name="discont-checkbox" id="discont-inpit" >
 								</fieldset>
-							</fieldset>
-							<fieldset class="crm-wrapper crm__descpiption">
-								<label for="description" class="crm-wrapper__title crm__descpiption-title">Еденицы измерения</label>
-								<textarea class="crm-wrapper__textarea crm__descpiption-textarea" name="descpiption" id="descpiption">
-								</textarea>
 							</fieldset>
 							<fieldset class="crm-wrapper crm__count">
 								<label for="count" class="crm-wrapper__title crm__count-title">Количество</label>
@@ -55,13 +60,25 @@
 								<label for="price" class="crm-wrapper__title crm__price-title">Цена</label>
 								<input class="crm-wrapper__input crm__price-input" type="number" name="price" id="price">
 							</fieldset>
+							</fieldset>
+							<fieldset class="crm-wrapper crm-image">
+									<label for="image" class="crm-image-button">
+										Добавить изображение
+									</label>
+									<input class="crm-wrapper__input crm-image__input" type="file" name="image" id="image">
+							</fieldset>
 						</fieldset>
-						<div class="btn-wrapper">
-							<button type="submit" class="btn">Добавить товар</button>
-						</div>
 				</form>
+				<div class="modal-bottom-wrapper">
+					<p class="total-cost">
+						Итоговая стоимость: 
+						<span class="total-cost__span">
+							$ 900.00
+						</span>
+					</p>
+					<button type="submit" class="btn">Добавить товар</button>
+							</div>
 			</div>
-
 		</div>
 	</div>
 </body>
