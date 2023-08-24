@@ -102,3 +102,34 @@
 	font-weight: 700;
 	color: var(--pale-purple, #6E6893);
 }
+
+@media (max-width: 830px) {
+	.overlay {
+		height: 100%;
+	}
+
+	.modal-open {
+		max-width: 70%;
+		min-height: 1000px;
+	}
+
+	.modal-open__wrapper {
+		padding: 60px;
+		min-width: 100%;
+		align-items: center;
+	}
+
+	.modal__title-wrapper {
+		text-align: center;
+		flex-direction: column;
+		max-width: 76%;
+	}
+
+	.modal-bottom-wrapper {
+		flex-wrap: wrap;
+		min-width: 70%;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+	}
+}
