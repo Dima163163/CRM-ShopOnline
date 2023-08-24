@@ -1,3 +1,5 @@
+'use strict';
+
 const nameProduct = 'JBL колонка';
 const amountProduct = 4;
 const categoryProduct = 'аудио техника';
